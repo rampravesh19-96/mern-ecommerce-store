@@ -62,33 +62,39 @@ export const AppContextProvider = (props) => {
             toast.error(error.message)
         }
     }
+const addToCart = async (itemId) => {
+    if (!user) {
+        return toast('Please login', {
+            icon: '⚠️',
+        });
+    }
 
-    const addToCart = async (itemId) => {
+    // ✅ Ensure cartItems is not undefined
+    let cartData = structuredClone(cartItems || {});
 
-        if (!user) {
-            return toast('Please login',{
-                icon: '⚠️',
-              })
-        }
+    if (cartData[itemId]) {
+        cartData[itemId] += 1;
+    } else {
+        cartData[itemId] = 1;
+    }
 
-        let cartData = structuredClone(cartItems);
-        if (cartData[itemId]) {
-            cartData[itemId] += 1;
-        }
-        else {
-            cartData[itemId] = 1;
-        }
-        setCartItems(cartData);
-        if (user) {
-            try {
-                const token = await getToken()
-                await axios.post('/api/cart/update', {cartData}, {headers:{Authorization: `Bearer ${token}`}} )
-                toast.success('Item added to cart')
-            } catch (error) {
-                toast.error(error.message)
-            }
+    setCartItems(cartData);
+
+    if (user) {
+        try {
+            const token = await getToken();
+            await axios.post(
+                '/api/cart/update',
+                { cartData },
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
+            toast.success('Item added to cart');
+        } catch (error) {
+            toast.error(error?.message || 'Failed to update cart');
         }
     }
+};
+
 
     const updateCartQuantity = async (itemId, quantity) => {
 
