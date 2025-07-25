@@ -1,0 +1,8 @@
+export default function NotAuthorized() {
+  return (
+    <div className="text-center mt-20">
+      <h1 className="text-3xl font-bold">403 - Not Authorized</h1>
+      <p>You do not have permission to view this page.</p>
+    </div>
+  );
+}
