@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 Ecommerce Web Application
 
-## Getting Started
+A full‑stack ecommerce platform enabling users to browse products,
+manage carts, and complete secure purchases online.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   React.js
+-   Node.js
+-   Express.js
+-   MongoDB
+-   Redux Toolkit
+-   Tailwind CSS
+-   Clerk Authentication
+-   Stripe Payments
+-   Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   Product browsing and filtering
+-   Shopping cart system
+-   Secure checkout using Stripe
+-   Order tracking for users
+-   Admin dashboard for product and order management
+-   Responsive UI built with Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Live Demo
 
-## Learn More
+Add your deployed link here
 
-To learn more about Next.js, take a look at the following resources:
+## 📸 Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add screenshots: - Product listing page - Cart page - Admin dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+------------------------------------------------------------------------
 
-## Deploy on Vercel
+# ⚙️ Project Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Prerequisites
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Install Node.js and setup MongoDB Atlas.
+
+## Server Setup
+
+1.  Configure MongoDB connection
+2.  Setup Clerk authentication
+3.  Configure Stripe payment gateway
+
+## Run Project
+
+Install dependencies
+
+    npm install
+
+Run development server
+
+    npm run dev
+
+## Author
+
+Ram Pravesh Singh
